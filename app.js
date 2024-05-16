@@ -3,11 +3,17 @@ function sortear() {
     let de = parseInt(document.getElementById('de').value);
     let ate = parseInt(document.getElementById('ate').value);
 
+    if (de >= ate) {
+        alert('O número incial é maior que o número final, digite novamente:')
+        return;
+    }
+
     let sorteados = [];
     let numero;
 
     for (let i = 0; i < quantidade; i++) {
         numero = obterNumeroAleatorio(de, ate);
+
 
         while (sorteados.includes(numero)) {
             numero = obterNumeroAleatorio(de, ate);
