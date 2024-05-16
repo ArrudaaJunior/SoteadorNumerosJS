@@ -4,8 +4,12 @@ function sortear() {
     let ate = parseInt(document.getElementById('ate').value);
 
     if (de >= ate) {
-        alert('O número incial é maior que o número final, digite novamente:')
+        alert('O número incial é maior que o número final, digite novamente:');
         return;
+    }
+
+    if (quantidade > (ate - de + 1)){
+        alert('A qauntidade de numeros sorteados deve ser menor ou igual ao intervalo dos números inicial e final do sorteio.');
     }
 
     let sorteados = [];
